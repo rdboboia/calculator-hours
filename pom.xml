@@ -27,7 +27,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>rdboboia.calculator.hours.App</mainClass>
+							<mainClass>rdboboia.calculator.hours.gui.MainWindow</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
