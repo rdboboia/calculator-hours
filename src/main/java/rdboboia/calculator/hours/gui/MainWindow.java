@@ -99,8 +99,12 @@ public class MainWindow {
 			LocalTime endTime = LocalTime.of((int) spnEndHour.getValue(), (int) spnEndMin.getValue(), (int) spnEndSec.getValue());
 
 			LocalTime hourDiff = HoursDifferenceCalculator.getHourDiff(startTime, endTime);
-
-			JOptionPane.showMessageDialog(null, hourDiff.toString(), "Result", JOptionPane.INFORMATION_MESSAGE);
+			
+			String hourDiffString = hourDiff.toString();
+			if (hourDiffString.length() == 5)
+				hourDiffString += ":00";
+			
+			JOptionPane.showMessageDialog(null, hourDiffString, "Result", JOptionPane.INFORMATION_MESSAGE);
 
 		});
 		GroupLayout glPanel = new GroupLayout(panel);
